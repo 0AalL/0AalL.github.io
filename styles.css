@@ -26,14 +26,14 @@ body {
   align-items: center;
   background-color: white;
   transition: background-color 0.3s ease;
-  object-fit: cover
+  object-fit: cover;
+  justify-content: center; 
+  align-items: center; 
 }
 
 .contenedor-imagen {
   width: 50%;
   height: 50%;
-  justify-content: center; 
-  align-items: center; 
 }
 
 .imagen {
