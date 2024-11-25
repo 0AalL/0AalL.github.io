@@ -31,17 +31,11 @@ body {
 .imagen {
   width: 40%;
   height: 100%;
-  object-fit: cover
-}
-#profile-image {
-  width: 100%;
-  height: 300px;
   object-fit: cover;
-  border-radius: 10px;
   transition: width 0.3s ease, height 0.3s ease;
 }
 
-/* Sección de la información */
+
 .info-section {
   width: 60%;
   padding: 20px;
