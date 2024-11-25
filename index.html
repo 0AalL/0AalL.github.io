@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Información Personal</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -22,7 +20,6 @@
         <button class="tab-button" onclick="showTab('proyectos')">Mis Proyectos</button>
         <button class="tab-button" onclick="showTab('hobbies')">Mis Hobbies</button>
         <button class="tab-button" onclick="showTab('objetivos')">Objetivos</button>
-        <button class="tab-button" onclick="showTab('contacto')">Contacto</button>
       </div>
 
       <div id="personal" class="tab-content">
@@ -64,64 +61,60 @@
           <li>📖 <strong>Leer al menos 12 libros al año</strong></li>
         </ul>
       </div>
-
-      <div id="contacto" class="tab-content">
-        <h2>Contacto</h2>
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-      </div>
     </div>
   </div>
 
   <script>
     function showTab(tabName) {
-      const contents = document.querySelectorAll('.tab-content');
-      contents.forEach(content => {
-        content.style.display = 'none';
-      });
+  const contents = document.querySelectorAll('.tab-content');
+  contents.forEach(content => {
+    content.style.display = 'none';
+  });
 
-      document.getElementById(tabName).style.display = 'block';
+  document.getElementById(tabName).style.display = 'block';
 
-      const image = document.getElementById("profile-image");
-      
-      if (tabName === 'personal') 
-        image.src = 'personal.png';  
-      else if (tabName === 'proyectos') 
-        image.src = 'proyectos.webp';  
-      else if (tabName === 'objetivos') 
-        image.src = 'objetivos.jpg';
-      else if (tabName === 'hobbies') 
-        image.src = 'hobbies.jpg';
-      else if (tabName === 'contacto') 
-        image.src = 'contacto.jpg';
+  const image = document.getElementById("profile-image");
+  
+  if (tabName === 'personal') 
+    image.src = 'personal.png';  
+  else if (tabName === 'proyectos') 
+    image.src = 'proyectos.webp';  
+  else if (tabName === 'objetivos') 
+    image.src = 'objetivos.jpg';
+  else if (tabName === 'hobbies') 
+    image.src = 'hobbies.jpg';
 
-      const imageSection = document.getElementById("image-section");
-      if (tabName === 'hobbies') {
-        imageSection.style.backgroundColor = 'tomato';
-      } else if (tabName === 'objetivos') {
-        imageSection.style.backgroundColor = 'lightblue';
-      } else if (tabName === 'proyectos') {
-        imageSection.style.backgroundColor = 'white';
-      } else {
-        imageSection.style.backgroundColor = '#D2B48C';
-      }
+  const imageSection = document.getElementById("image-section");
+  if (tabName === 'hobbies') {
+    imageSection.style.backgroundColor = 'tomato';
+  } else if (tabName === 'objetivos') {
+    imageSection.style.backgroundColor = 'lightblue';
+  } else if (tabName === 'proyectos') {
+    imageSection.style.backgroundColor = 'white';
+  } else {
+    imageSection.style.backgroundColor = '#D2B48C';
+  }
 
-      const infoSection = document.querySelector('.info-section');
-      infoSection.style.backgroundColor = '#FF6347';
+  const infoSection = document.querySelector('.info-section');
+  infoSection.style.backgroundColor = '#FF6347';
 
-      const buttons = document.querySelectorAll('.tab-button');
-      buttons.forEach(button => {
-        button.style.backgroundColor = '#FF4500';
-        button.style.color = '#fff';
-        button.style.border = 'none';
-        button.style.padding = '10px 20px';
-        button.style.cursor = 'pointer';
-        button.style.fontSize = '16px';
-      });
-    }
+  const buttons = document.querySelectorAll('.tab-button');
+  buttons.forEach(button => {
+    button.style.backgroundColor = '#FF4500';
+    button.style.color = '#fff';
+    button.style.border = 'none';
+    button.style.padding = '10px 20px';
+    button.style.cursor = 'pointer';
+    button.style.fontSize = '16px';
+  });
+}
+
+showTab('personal');
+
 
     showTab('personal');
   </script>
 </body>
 </html>
+
 
